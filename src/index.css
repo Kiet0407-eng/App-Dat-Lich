@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer components {
+  /* Tiêu chuẩn nút bấm (Buttons) */
+  .btn-primary {
+    @apply w-full py-4 bg-[#2f6bff] hover:bg-blue-700 transition-colors text-white rounded-[16px] font-extrabold text-[15px];
+  }
+  
+  .btn-secondary {
+    @apply w-full py-4 bg-slate-100 hover:bg-slate-200 transition-colors text-slate-500 rounded-[16px] font-extrabold text-[15px];
+  }
+
+  /* Tiêu chuẩn ô nhập liệu (Inputs) */
+  .input-field {
+    @apply w-full bg-[#EEF2FF] border-none rounded-[16px] px-5 py-[14px] text-[14px] font-semibold text-[#2f6bff] outline-none focus:ring-2 focus:ring-[#2f6bff]/20 transition-all;
+  }
+
+  /* Nút chứa Icon tròn */
+  .icon-btn-rounded {
+    @apply w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center text-[#2f6bff] shadow-sm relative transition-transform active:scale-95;
+  }
+  
+  /* Thẻ card chung */
+  .card-container {
+    @apply flex items-center gap-4 px-4 py-3 bg-white w-full;
+  }
+}
+
+@layer utilities {
+  /* Tiện ích ẩn thanh cuộn (Scrollbar) cho tất cả trình duyệt */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
